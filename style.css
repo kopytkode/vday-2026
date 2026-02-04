@@ -94,19 +94,20 @@ button:hover {
   from { transform: translateY(100vh); }
   to { transform: translateY(-100vh); }
 }
-/* Almost full-screen on mobile */
+
+/* Cozy almost-fullscreen mobile */
 @media (max-width: 480px) {
   body {
-    padding: 12px;
+    padding: 14px;
   }
 
   .container {
-    width: 100%;
-    min-height: 92vh;
+    width: 80%;
+    min-height: 60vh;   /* ⬅️ pulled back from 92vh */
     max-width: none;
 
-    padding: 40px 25px 45px;
-    border-radius: 35px;
+    padding: 30px 22px 34px; /* ⬅️ less padding */
+    border-radius: 30px;
 
     display: flex;
     flex-direction: column;
@@ -114,37 +115,37 @@ button:hover {
   }
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem; /* ⬅️ down from 2.8 */
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   .countdown {
-    margin: 25px 0;
+    margin: 18px 0;
   }
 
   .countdown div {
-    width: 85px;
-    padding: 14px;
+    width: 72px;       /* ⬅️ smaller */
+    padding: 10px;
   }
 
   .countdown span {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 
   .sheep-gif {
-    width: 165px;
+    width: 140px;
   }
 
   button {
-    font-size: 1.15rem;
-    padding: 16px 26px;
+    font-size: 1.05rem;
+    padding: 14px 22px;
   }
 
   .secret p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    line-height: 1.45;
   }
 }
