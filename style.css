@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dad6ff, #f3f1ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #5a2a4a;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.3rem;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.countdown div {
+  background: #f4e6ff;
+  border-radius: 15px;
+  padding: 10px;
+  width: 80px;
+}
+
+.countdown span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sheep-gif {
+  width: 130px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display:block;
+}
+
+button {
+  background: #a98fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ff6f9c;
+}
+
+.hidden {
+  display: none;
+}
+
+.secret {
+  margin-top: 20px;
+  background: #fff0f7;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+/* Floating hearts */
+.hearts::before {
+  content: "💖 💕 💗 💘 💓";
+  position: absolute;
+  animation: float 20s linear infinite;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+/* Almost full-screen on mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 92vh;
+    max-width: none;
+
+    padding: 40px 25px 45px;
+    border-radius: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .countdown {
+    margin: 25px 0;
+  }
+
+  .countdown div {
+    width: 85px;
+    padding: 14px;
+  }
+
+  .countdown span {
+    font-size: 1.9rem;
+  }
+
+  .sheep-gif {
+    width: 165px;
+  }
+
+  button {
+    font-size: 1.15rem;
+    padding: 16px 26px;
+  }
+
+  .secret p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
